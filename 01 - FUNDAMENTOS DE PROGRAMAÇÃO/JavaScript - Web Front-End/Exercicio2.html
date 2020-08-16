@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Exercicio 2</h1>
+        <p>
+            2 - Dado um número inteiro positivo de 3 algarismos, inverter a ordem de seus <br>
+            algarismos. Os três algarismos do número dado são diferentes de zero.
+        </p>
+    </header>
+    <form id="BoxForm">
+        Digite um número inteiro de 3 algarimos: <input id="valor" type="text" name="valor"> <br>
+        <br> <input type="button" name="valor" value="Resultado" onclick="mostraResultado()" >
+    </form>
+    <div id="resultado">
+        <script> 
+            function mostraResultado(){
+                /*Outras formas de capturar o valor
+                const num2 = document.forms['BoxForm'].valor[0].value
+                const num3 = document.getElementById('valor') */
+
+                const form = document.querySelector('form')
+                const num = document.querySelector('#valor').value
+
+                const valorInvertido = num.charAt(2)+num.charAt(1)+num.charAt(0)
+
+                const resultado = document.createElement('p')
+                resultado.innerHTML = valorInvertido
+                form.appendChild(resultado)
+
+                //Adicionando CSS
+                document.getElementById('resultado').classList.add('destaque')
+            }
+        </script>
+    </div>
+</body>
+</html>

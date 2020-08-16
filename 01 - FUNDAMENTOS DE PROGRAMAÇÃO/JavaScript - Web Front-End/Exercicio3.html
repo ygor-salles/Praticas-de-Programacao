@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 3</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 3</h1>
+    </header>
+    <div>
+        <p>
+            3 - Ler dois números, armazenando-os nas variáveis num1 e num2. Verificar se o valor de <br>
+            num1 é maior que o valor de num2 e, em caso positivo, trocar os conteúdos das variáveis. <br>
+            <em>Como extra será utilizado a função apagar</em>
+        </p>
+    </div>
+    Digite valor de num1: <input type="text" name="num1"> <br>
+    Digite valor de num2: <input type="text" name="num2"> <br>
+    <br> <input resposta type="button" value="Resultado"> 
+    <input apaga type="button" value="Apagar">
+
+    <!--Div onde será armazenado os paragrafos de resultado-->
+    <div id="resultadoFinal"></div>
+
+    <div id="resultado">
+        <script>
+            function mostraResultado() {
+                let num1 = document.querySelector('body input[name="num1"]').value
+                let num2 = document.querySelector('body input[name="num2"]').value
+                if (num1 > num2){
+                    let aux = num1
+                    num1 = num2
+                    num2 = aux
+                }
+
+                //criando as tag's p para exibir o resultado
+                const resultadoNum1 = document.createElement('p')
+                const resultadoNum2 = document.createElement('p')
+                resultadoNum1.innerHTML = `Num1 é: ${num1}`
+                resultadoNum2.innerHTML = `Num2 é: ${num2}`
+
+                //Adicionando no body do html
+                const div = document.querySelector('#resultadoFinal')
+                div.appendChild(resultadoNum1)
+                div.appendChild(resultadoNum2)
+
+                //Adicionando CSS
+                document.getElementById('resultado').classList.add('destaque')
+            }
+
+            function apagar(){
+                var elemento = document.getElementById('resultadoFinal')
+                //removendo todos os nós filhos de #resultadoFinal
+                while(elemento.firstChild != null) {
+                    elemento.removeChild(elemento.firstChild)
+                }
+                //Removendo CSS
+                document.getElementById('resultado').classList.remove('destaque')
+            }
+
+            const resp = document.querySelector('[resposta]')
+            resp.onclick = mostraResultado
+            const apaga = document.querySelector('[apaga]')
+            apaga.onclick = apagar
+        </script>
+    </div>
+</body>
+
+</html>

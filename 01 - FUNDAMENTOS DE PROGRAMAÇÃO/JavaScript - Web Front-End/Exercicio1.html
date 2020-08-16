@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 1</h1>
+        <p>
+            1 - Faça um algoritmo que receba o peso de uma pessoa, calcule e mostre: <br>
+            a. O novo peso quando a pessoa engorda 15% do peso digitado <br>
+            b. O novo peso quando a pessoa engorda 20% do peso digitado <br>
+        </p>
+    </header>
+    <div id="resultado">
+        <script>
+            let peso = prompt('Digite seu peso: ')
+            peso = parseFloat(peso)
+            let novoPeso15 = peso + (peso * 0.15)
+            let novoPeso20 = peso + (peso * 0.20)
+            document.write('O novo peso quando engorda 15% é: ' + novoPeso15)
+            document.write('<br> O novo peso quando engorda 20% é: ' + novoPeso20)
+
+            //Adicionando CSS
+            document.getElementById('resultado').classList.add('destaque')
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+body {
+    font-size: 20px;
+    background-color: rgb(230, 206, 174);
+    margin-left: 30px;
+}
+
+.destaque {
+    border-top: 10px;
+    border-bottom: solid 3px green;
+}

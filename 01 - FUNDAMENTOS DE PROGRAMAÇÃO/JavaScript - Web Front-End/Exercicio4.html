@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 4</title>
+    <link rel="stylesheet" href="/estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 4</h1>
+        <p>
+            4 - Escreva um algoritmo para calcular as raízes de uma equação do segundo grau <br>
+            (Ax2+ Bx + C). Considere que o valor de A <> 0 e (B2– 4AC) > 0. Escreva os valores na tela. <br>
+        </p>
+        <form>
+            Digite valor de A: <input type="text" id="a"> <br>
+            Digite valor de B: <input type="text" id="b"> <br>
+            Digite valor de C: <input type="text" id="c"> <br>
+            <br> <input type="button" value="Resultado" onclick="calcular()">
+            <input type="button" value="Apagar" onclick="apagar()">
+        </form>
+
+        <div id="resultadoFinal"></div>
+        <div>
+            <script>
+                function calcular() {
+                    const div = document.getElementById('resultadoFinal')
+                    a = document.getElementById('a').value
+                    b = document.getElementById('b').value
+                    c = document.getElementById('c').value
+
+                    if (a != 0) {
+                        delta = b ** 2 - 4 * a * c
+                        if (delta > 0) {
+                            mensagem = document.createElement('p')
+                            mensagem.innerHTML = 'Equação possui 2 raízes reais'
+                            x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                            x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                            msgResultado = document.createElement('p')
+                            msgResultado.innerHTML = `X1: ${x1} <br> X2: ${x2}`
+                            div.appendChild(mensagem)
+                            div.appendChild(msgResultado)
+                        }
+                        else if (delta == 0) {
+                            mensagem = document.createElement('p')
+                            mensagem.innerHTML = 'Equação possui 1 raíz real'
+                            x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                            msgResultado = document.createElement('p')
+                            msgResultado.innerHTML = `X1: ${x1}`
+                            div.appendChild(mensagem)
+                            div.appendChild(msgResultado)
+                        }
+                        else {
+                            mensagem = document.createElement('p')
+                            mensagem.innerHTML = 'Equação não possui raízes reais'
+                            div.appendChild(mensagem)
+                        }
+                    }
+                    else {
+                        msg = document.createElement('p')
+                        msg.innerHTML = 'Valor de A deve ser diferente de 0!'
+                        div.appendChild(msg)
+                    }
+
+                    //Adicionando CSS
+                    document.getElementById('resultadoFinal').classList.add('destaque')
+                }
+
+                function apagar() {
+                    var elemento = document.getElementById('resultadoFinal')
+                    //removendo todos os nós filhos de #resultadoFinal
+                    while (elemento.firstChild != null) {
+                        elemento.removeChild(elemento.firstChild)
+                    }
+                    //Removendo CSS
+                    document.getElementById('resultadoFinal').classList.remove('destaque')
+                }
+            </script>
+        </div>
+    </header>
+</body>
+
+</html>

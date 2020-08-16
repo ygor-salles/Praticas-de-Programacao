@@ -1,0 +1,2 @@
+Até o Momento não encontrei uma solução em Python que suporte mais de um construtor
+dentro da classe

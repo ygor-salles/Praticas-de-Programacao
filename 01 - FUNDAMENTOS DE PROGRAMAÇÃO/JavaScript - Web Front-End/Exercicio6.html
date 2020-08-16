@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 6</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 6</h1>
+        <p>
+            6 - Elabore um programa que leia dois números n e m (m>=n) e escreva todos os números <br>
+            pares entre n e m inclusive.
+        </p>
+    </header>
+    <section>
+        <input type="button" value="Processar" onclick="processar()">
+    </section>
+    <div id="resultadoFinal"></div>
+    <script>
+        function processar() {
+            let m = prompt('Digite o valor de M: ')
+            let n = prompt('Digite o valor de N: ')
+            m = parseFloat(m)
+            n = parseFloat(n)
+
+            let i = m
+            let msg = ''
+            do {
+                if (i % 2 == 0)
+                    msg += `${i} | `
+                i++
+            } while (i <= n)
+
+            //Adicionando o HTML
+            const p = document.createElement('p')
+            p.innerHTML = msg
+            const div = document.querySelector('#resultadoFinal')
+            div.appendChild(p)
+
+            //Adicionando o CSS
+            document.querySelector('#resultadoFinal').classList.add('destaque')
+        }
+    </script>
+</body>
+
+</html>

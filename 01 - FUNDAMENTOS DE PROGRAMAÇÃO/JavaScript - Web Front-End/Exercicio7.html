@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 7</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 7</h1>
+    </header>
+    <p>
+        7 - Elabore um programa para calcular e escrever a seguinte soma:
+    <table>
+        <tr>
+            <td>37 * 38</td>
+            <td>36 * 37</td>
+            <td>35 * 36</td>
+            <td class="meio"> ... </td>
+            <td class="meio">1 * 2</td>
+        </tr>
+        <tr class="meio">
+            <td>---------- +</td>
+            <td>---------- +</td>
+            <td>---------- +</td>
+            <td>---------- +</td>
+            <td>----------</td>
+        </tr>
+        <tr class="meio">
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td> ... </td>
+            <td>37</td>
+        </tr>
+    </table>
+    </p>
+    <input type="button" value="Processar" onclick="processar()">
+    <div id="resultadoFinal"></div>
+    <script>
+        function processar() {
+            soma = 0;
+            num1 = 37, num2 = 38;
+
+            for (den = 1; den <= 37; den++) {
+                soma += ((num1 * num2) / den);
+                num1--;
+                num2--;
+            }
+
+            //Adicionando o HTML
+            const p = document.createElement('p')
+            p.innerHTML = `A soma total é: ${soma}`
+            const div = document.getElementById('resultadoFinal')
+            div.appendChild(p)
+
+            //Adicionando o CSS
+            document.querySelector('#resultadoFinal').classList.add('destaque')
+        }
+    </script>
+</body>
+
+</html>

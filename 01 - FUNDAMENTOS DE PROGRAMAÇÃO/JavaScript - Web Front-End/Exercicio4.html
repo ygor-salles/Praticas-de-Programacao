@@ -14,6 +14,7 @@
         <p>
             4 - Escreva um algoritmo para calcular as raízes de uma equação do segundo grau <br>
             (Ax2+ Bx + C). Considere que o valor de A <> 0 e (B2– 4AC) > 0. Escreva os valores na tela. <br>
+            Teste 2 raízes (a=1 b=-3 c=-10) //Teste 1 raíz (a=9 b=-12 c=4) //Teste 0 raíz (a=5 b=3 c=5) <br>
         </p>
         <form>
             Digite valor de A: <input type="text" id="a"> <br>
@@ -31,6 +32,10 @@
                     a = document.getElementById('a').value
                     b = document.getElementById('b').value
                     c = document.getElementById('c').value
+                    a = parseFloat(a)
+                    b = parseFloat(b)
+                    c = parseFloat(c)
+                    console.log(a, b, c)
 
                     if (a != 0) {
                         delta = b ** 2 - 4 * a * c

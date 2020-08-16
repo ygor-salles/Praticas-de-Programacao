@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 8</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Exercicio 8</h1>
+    <p>
+        8 - Elabore um algoritmo para calcular e imprimir o valor de S, <br>
+        sendo S = -1/2 + 2/4 - 3/6 + 4/8 -5/10 +, ..., +10/20 <br>
+    </p>
+    <input type="button" value="Processa" onclick="processa()"> <br>
+    <br> <div id="resultadoFinal"></div>
+    <script>
+        function processa() {
+            s = 0
+            den = 2
+            for (i = 1; i <= 10; i++) {
+                if (i % 2 == 0)
+                    s = s + (i / den)
+                else
+                    s = s + ((-i) / den)
+                den += 2
+            }
+
+            //Adicionando o HTML
+            const p = document.querySelector('#resultadoFinal')
+            p.innerHTML = `A soma é: ${s}`
+            const div = document.querySelector('#resultadoFinal')
+            div.appendChild(p)
+
+            //Adicionando o CSS
+            document.getElementById('resultadoFinal').classList.add('destaque')
+        }
+    </script>
+</body>
+
+</html>

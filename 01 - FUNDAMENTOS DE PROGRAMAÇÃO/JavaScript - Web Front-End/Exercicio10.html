@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 10</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Exercicio 10</h1>
+    <p>
+        10 - Leia valores numéricos até que o valor 0 for digitado. Em seguida, <br>
+        calcule a média dos valores digitados e informe o usuário. <br>
+    </p>
+    <input type="button" value="Iniciar" onclick="somatoria()">
+    <div id="resultadoFinal"></div>
+    <script>
+        function somatoria() {
+            var soma = 0
+            do {
+                valor = prompt('Digite um valor: ')
+                valor = parseFloat(valor)
+                soma += valor
+            } while (valor != 0)
+            document.write('A somatória final é: ',soma)
+        }
+    </script>
+</body>
+
+</html>

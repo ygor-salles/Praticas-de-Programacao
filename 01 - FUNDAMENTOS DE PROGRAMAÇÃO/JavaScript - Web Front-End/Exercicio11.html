@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 11</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 11</h1>
+    </header>
+    <p>
+        11 - imprimir o cabeçalho definido em uma função <br>
+        Curso: Sisitemas de Informacao <br>
+        Disciplina: Fundamentos de Progaramacao <br>
+        Universidade federal de Itajuba - Unifei <br>
+        e retornar em uma nova função o conceito conforme a media do aluno que serão digitadas pelo usuário. <br>
+        Segue a tabela abaixo: <br>
+    <table border="3" style="text-align: center; background-color: azure;">
+        <tr>
+            <th>Nota</th>
+            <th>Conceito</th>
+        </tr>
+        <tr>
+            <td>de 0,0 a 4,9</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>de 5,0 a 6,9</td>
+            <td>C</td>
+        </tr>
+        <tr>
+            <td>de 7,0 a 8,9</td>
+            <td>B</td>
+        </tr>
+        <tr>
+            <td>de 9,0 a 10</td>
+            <td>A</td>
+        </tr>
+    </table>
+    </p>
+    <form style="text-align: center;">
+        <label for="nota">Nota: </label>
+        <input type="text" id="nota"> <br>
+        <br> <input type="button" value="Resultado" onclick="main()">
+    </form>
+    <div id="resultadoFinal"></div>
+    <div>
+        <!--Só funcionará se estiver local host-->
+        <script src="/Exercicio11.1.js"></script>
+    </div>
+</body>
+
+</html>

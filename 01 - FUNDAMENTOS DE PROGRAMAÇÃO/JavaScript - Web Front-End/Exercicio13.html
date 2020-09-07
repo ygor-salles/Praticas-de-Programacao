@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 13</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Exercicio 13</h1>
+    <p>
+        Faça um programa que preencha um vetor com seis elementos numéricos inteiros. Calcule e mostre: todos os números
+        <br>
+        pares; a quantidade de números pares; todos os números ímpares; a quantidade de números ímpares.
+    </p>
+    <form>
+        1º Num: <input type="text" num placeholder="Numero inteiro" class="inputText"> <br>
+        2º Num: <input type="text" num placeholder="Numero inteiro" class="inputText"> <br>
+        3º Num: <input type="text" num placeholder="Numero inteiro" class="inputText"> <br>
+        4º Num: <input type="text" num placeholder="Numero inteiro" class="inputText"> <br>
+        5º Num: <input type="text" num placeholder="Numero inteiro" class="inputText"> <br>
+        <input calcular type="button" value="Calcular">
+    </form>
+    <h4 id="resultadoFinal"></h4>
+    <script type="text/javascript">
+        function processar() {
+            const nums = document.querySelectorAll('[num]')
+            const arrayNums = [...nums]
+            let arrrayPar = []
+            let arrayImpar = []
+            let contPar = 0
+            let contImpar = 0
+            arrayNums.forEach(i => {
+                if (i.value % 2 == 0){
+                    arrrayPar[contPar] = i.value
+                    contPar += 1
+                }
+                else{
+                    arrayImpar[contImpar] = i.value
+                    contImpar += 1
+                }
+            })
+            let h3 = document.getElementById('resultadoFinal')  
+            h3.innerHTML = `Quantidade de numeros pares: ${contPar}<br>`
+            arrrayPar.forEach(i => h3.innerHTML += `${i}<br>`)
+            
+            h3.innerHTML += `<br>Quantidade de numeros ímpares: ${contImpar}<br>`
+            arrayImpar.forEach(i => h3.innerHTML += `${i}<br>`)
+        }
+        const resp = document.querySelector('[calcular]')
+        resp.onclick = processar
+    </script>
+</body>
+
+</html>

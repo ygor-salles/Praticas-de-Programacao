@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 15</title>
+</head>
+<body>
+    <h1>Exercicio 15</h1>
+    <p>
+        Escreva um programa que leia uma matriz 5 x 5 de forma randômica e imprima sua diagonal primária e secundária.
+    </p>
+    <form>
+        <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <br>
+        <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <br>
+        <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <br>
+        <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <br>
+        <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <input num type="text"> <br>
+        <br><br><input type="button" value="processar" onclick="processar()">
+    </form>
+    <h3 id="resultadoFinal"></h3>
+    <script type="text/javascript">
+        function processar(){
+            const nums = document.querySelectorAll('[num]')
+            const arrayNums = [...nums]
+
+            let OutputWindow = window.open("", "", "status=0,menubar=10,height=200,width=200")
+            OutputWindow.document.open()
+            OutputWindow.document.write('Não é possível realizar operação de matriz no Java Script')
+
+            const h3 = document.getElementById('resultadoFinal')
+            arrayNums.forEach(i => h3.innerHTML += `${i.value}, `)
+        }
+    </script>
+</body>
+</html>

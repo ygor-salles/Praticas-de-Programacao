@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 14</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <h1>Exercicio 14</h1>
+    <p>
+        Leia um conjunto de nomes e os armazene em um vetor de forma dinâmica. Em seguida, leia um nome e verifique se o
+        <br>
+        mesmo faz parte desse vetor.
+    </p>
+    <input botao type="button" value="Processar">
+    <div style="margin-top: 20px;" id="resultadoFinal"></div>
+    <script>
+        var arrayNomes = []
+        function processar() {
+            do {
+                arrayNomes.push(prompt('Digite um nome: '))
+                parar = prompt('Deseja parar (s/n): ')
+            } while (parar != 's' && parar != 'S')
+            arrayNomes.forEach(i => document.getElementById('resultadoFinal').innerHTML += `${i}<br>`)
+            nome = prompt('Digite nome para verificação: ')
+            arrayNomes.forEach(i => {
+                if (nome == i){
+                    alert('O nome '+i+' faz parte do vetor')
+                }
+            })
+        }
+        const botao = document.querySelector('[botao]')
+        botao.onclick = processar
+    </script>
+</body>
+
+</html>

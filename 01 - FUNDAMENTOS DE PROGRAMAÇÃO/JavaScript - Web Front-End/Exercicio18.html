@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 18</title>
+</head>
+
+<body>
+    <h1>Exercicio 18</h1>
+    <p>
+        Escreva um programa em que leia 3 cadeias de caracteres de tamanho máximo 50, e as <br>
+        imprime na tela em ordem alfabética.
+    </p>
+    <input type="text" placeholder="Digite a cadeia" width="1000" cadeia> <br>
+    <input type="text" placeholder="Digite a cadeia" width="1000" cadeia> <br>
+    <input type="text" placeholder="Digite a cadeia" width="1000" cadeia> <br>
+    <br><input type="button" value="processar" onclick="processar()">
+    <script>
+        function processar(){
+            const cadeias = document.querySelectorAll('[cadeia]')
+            const arrayCadeias = Array.from(cadeias)
+            const arrayCadeiaValues = []
+            arrayCadeias.forEach(i => arrayCadeiaValues.push(i.value))
+            alert(arrayCadeiaValues.sort()) 
+        }
+    </script>
+</body>
+
+</html>

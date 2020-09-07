@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 21</title>
+</head>
+
+<body>
+    <h1>Exercicio 21</h1>
+    <p>
+        Elabore um programa que receba a matrícula, a nota 1 e nota 2 de uma lista de alunos e <br>
+        escreva essas informações em um arquivo (nome do arquivo é exercicioArquivo.dat). A <br>
+        leitura de dados deve ser interrompida quando for digitado a matricula = 0.
+    </p>
+    <input type="button" value="processar" onclick="processar()">
+    <script>
+        function processar(){
+            var arrayMatricula = []
+
+            matricula = parseInt(prompt('Digite a matricula: '))
+            while (matricula != 0) {
+                n1 = parseFloat(prompt('Digite a N1: '))
+                n2 = parseFloat(prompt('Digite a N2: '))
+                arrayMatricula.push({
+                    nota1: n1,
+                    nota2: n2,
+                    mat: matricula
+                })
+                matricula = parseInt(prompt('Digite a matricula: '))
+            } 
+            arrayMatricula.forEach(i => {
+                console.log(`Matricula: ${i.mat} -- N1: ${i.nota1} -- N2: ${i.nota2}`)
+            })
+        }
+    </script>
+</body>
+
+</html>

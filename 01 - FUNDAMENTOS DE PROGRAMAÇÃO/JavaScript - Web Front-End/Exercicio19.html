@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 19</title>
+</head>
+<body>
+    <h1>Exercicio 19</h1>
+    <p>
+        Imprimir Dia mês e Ano da data atual
+    </p>
+    <input type="button" value="processar" onclick="processar()">
+    <script type="text/javascript">
+        function processar(){
+            let OutputWindow = window.open("", "", "status=0,menubar=10,height=200,width=200")
+            OutputWindow.document.open()
+            OutputWindow.document.write(new Date())
+        }
+    </script>
+</body>
+</html>

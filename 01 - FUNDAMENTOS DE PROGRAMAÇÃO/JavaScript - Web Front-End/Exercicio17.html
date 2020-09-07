@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 17</title>
+</head>
+
+<body>
+    <h1>Exercicio 17</h1>
+    <p>
+        Faça uma função para criptografar uma frase digitada pelo usuário. A criptografia deverá substituir todas as
+        <br>
+        vogais por *. Utilize a função no programa principal. A frase poderá ter, no máximo, 50 caracteres.
+    </p>
+    <input type="button" id="botao" value="processar"> <br><br>
+    <div id="resultadoFinal"></div>
+    <script>
+        function processar() {
+            const input = document.createElement('input')
+            input.setAttribute('id', 'campo')
+            const resultado = document.createElement('input')
+            resultado.setAttribute('type', 'button')
+            resultado.setAttribute('value', 'resultado')
+            resultado.setAttribute('onclick', 'resultado()')
+            resultado.setAttribute('placeholder', 'Digite uma frase')
+            resultado.setAttribute('width', 300)
+            const div = document.getElementById('resultadoFinal')
+            div.appendChild(input)
+            div.appendChild(resultado)
+        }
+        const botao = document.querySelector('#botao')
+        botao.onclick = processar
+
+        function resultado() {
+            frase = document.getElementById('campo').value
+            frase = frase.replace(/a/gi, '*')
+            frase = frase.replace(/e/gi, '*')
+            frase = frase.replace(/i/gi, '*')
+            frase = frase.replace(/o/gi, '*')
+            frase = frase.replace(/u/gi, '*')
+
+            let OutputWindow = window.open("", "", "status=0,menubar=20,height=400,width=400")
+            OutputWindow.document.open()
+            OutputWindow.document.write(frase)
+        }
+
+    </script>
+</body>
+
+</html>

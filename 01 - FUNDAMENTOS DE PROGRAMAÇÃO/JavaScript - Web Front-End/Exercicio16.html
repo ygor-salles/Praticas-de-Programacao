@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 16</title>
+</head>
+
+<body>
+    <h1>Exercicio 16</h1>
+    <p>
+        Escreva um programa que recebe uma cadeia de caracteres verifica se esta cadeia é um palíndromo. Uma palavra é <br>
+        dita ser palíndromo se a sequência de seus caracteres da esquerda para a direita é igual à sequência de seus <br>
+        caracteres da direita para a esquerda. Ex.: arara.
+    </p>
+    Cadeia: <input type="text" id="cadeia" placeholder="Digite uma palavra"> <br><br>
+    <input type="button" value="processar" onclick="processar()">
+    <script>
+        function palindromo(str) {
+            for(let i=0; i<str.length; i++)
+                if (str[i] != str[str.length - i - 1])
+                    return false
+            return true
+        }
+        function processar() {
+            str = document.getElementById('cadeia').value
+            if (palindromo(str))
+                alert(str + ' é palindromo!!')
+            else
+                alert(str + " nao é palindromo!!")
+        }
+    </script>
+</body>
+
+</html>

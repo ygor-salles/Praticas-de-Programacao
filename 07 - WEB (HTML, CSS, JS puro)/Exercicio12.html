@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios HTML</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Exercicio 12</h1>
+    </header>
+    <p>
+        12 - Faça um programa que contenha uma função que recebe dois números positivos <br>
+        e retorna a soma dos N números inteiros existentes entre eles (inclusive). <br>
+        Use a função no programa principal. <br>
+    </p>
+    <form>
+        Num1: <input type="text" id="num1"> <br>
+        Num2: <input type="text" id="num2"> <br>
+    </form>
+    <nav style="margin: 50px;">
+        <a class="botao navega" href navegacao="Exercicio12.1.html">LINK Resultado</a>
+    </nav>
+    <section id="conteudo"></section>
+    <footer>
+        Utilizando Ajax
+    </footer>
+    <!--Utilizando a técninca Ajax-->
+    <!--Será necessário executar um sevidor localhost-->
+    <script>
+        document.querySelectorAll('[navegacao]').forEach(link => {
+            const conteudo = document.getElementById('conteudo')
+
+            link.onclick = function (e) {
+                e.preventDefault()
+                fetch(link.getAttribute('navegacao'))
+                    .then(resp => resp.text())
+                    .then(html => conteudo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+
+</html>

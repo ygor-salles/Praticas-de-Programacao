@@ -131,6 +131,11 @@ turma1.aluno.forEach(aluno => {
     console.log(`Aluno: ${aluno.nome} -- Nascimento: ${aluno.dataNascimento} -- Sexo: ${aluno.sexo}`);
 })
 console.log()
+console.log('Código: '+turma2.codigo+'\nProfessor: '+turma2.professor.nome+'\nLista de Alunos:')
+turma2.aluno.forEach(aluno => {
+    console.log(`Aluno: ${aluno.nome} -- Nascimento: ${aluno.dataNascimento} -- Sexo: ${aluno.sexo}`);
+})
+console.log()
 
 console.log('DISCIPLINAS:...................................................')
 console.log(`Nome: ${disc.nome} \nLista de Turmas: `)
@@ -138,5 +143,3 @@ disc.turma.forEach(turma => {
     console.log(`Turma: ${turma.codigo} -- Professor: ${turma.professor.nome}`);
 })
 console.log()
-
-

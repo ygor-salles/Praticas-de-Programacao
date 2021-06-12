@@ -6,7 +6,7 @@
 import 'dart:io';
 
 main(List<String> args) {
-  var array = [1, 2, 5, 7, 9, 3];
+  List<int> array = [1, 2, 5, 7, 9, 3];
 
   // var array = []
   // var valor;

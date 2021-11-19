@@ -149,3 +149,7 @@ Executando o comando abaixo vemos o resultado de todos os testes:
 yarn test
 ```
 
+<img src="https://raw.githubusercontent.com/ygor-salles/Praticas-de-Programacao/master/test/assets/terminalTest.PNG" 
+    height="60%" width="60%" alt="terminalTest">
+    
+ - É possível perceber pelo terminal do VSCode que dois testes passaram e um não passou, visto que no teste que deu erro, era esperado o retorno de nome "Rogério" porém o objeto Pessoa foi instanciado com o nome "Ygor".

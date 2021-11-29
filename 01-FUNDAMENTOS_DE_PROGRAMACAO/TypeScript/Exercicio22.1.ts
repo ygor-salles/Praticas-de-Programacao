@@ -3,17 +3,17 @@
 obs: Utilizando Aerrow Function e ternário nos casos possíveis
 */
 
-function fib(nn: number) {
+function fib(nn: number): number {
   if (nn == 0) return 0
   if (nn == 1) return 1
   return fib(nn - 1) + fib(nn - 2)
 }
 
-function fatorial(nn: number) {
+function fatorial(nn: number): number {
   return (nn == 0 || nn == 1) ? 1 : nn * fatorial(nn - 1)
 }
 
-var soma2 = (nn: number) => nn == 1 ? 1 : nn + soma2(nn - 1)
+let soma2: any = (nn: number) => nn == 1 ? 1 : nn + soma2(nn - 1)
 
 //FUNÇÃO PRINCIPAL
 let nn: number = 5

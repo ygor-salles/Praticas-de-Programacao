@@ -4,7 +4,7 @@ A criptografia deverá substituir todas as vogais por *.
 Utilize a função no programa principal. A frase poderá ter, no máximo, 50 caracteres.
 */
 
-function criptografia(frase: string) {
+function criptografia(frase: string): void {
     frase = frase.replace(/a/gi, '*')
     frase = frase.replace(/e/gi, '*')
     frase = frase.replace(/i/gi, '*')

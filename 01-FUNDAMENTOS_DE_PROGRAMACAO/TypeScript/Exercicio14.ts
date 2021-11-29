@@ -4,10 +4,10 @@ dinâmica. Em seguida, leia um nome e verifique se o mesmo faz parte
 desse vetor.
 */
 
-const array_elementos = ['Lucas', 'José', 'Adriana', 'Joana', 'Larissa', 'Marcos', 1, true, 5.3, { id: 3 }]
-let array_recebe = []
+const array_elementos: any[] = ['Lucas', 'José', 'Adriana', 'Joana', 'Larissa', 'Marcos', 1, true, 5.3, { id: 3 }]
+let array_recebe: any[] = []
 
-let k = 0
+let k: number = 0
 do {
     array_recebe.push(array_elementos[k])
     //array_recebe[k] = array_elementos[k] ==>> PODE SER FEITO PELA FORMA TRADICIONAL TB
@@ -17,7 +17,7 @@ do {
 array_recebe.sort() //ordenando array
 console.log('\nSeu novo array é: ', array_recebe)
 
-const nomeA = 'Adriana'
+const nomeA: string = 'Adriana'
 if (array_recebe.indexOf(nomeA) != -1)
     console.log(`\nO nomeA ${nomeA} existe no array!`)
 else

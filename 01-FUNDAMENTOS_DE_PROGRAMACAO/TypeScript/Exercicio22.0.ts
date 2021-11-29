@@ -2,19 +2,19 @@
 22 - Realizar as funções de fibonachi, fatorial e a somatória de 1 até N, todas com recursividade.
 */
 
-function fib2(n: number) {
+function fib2(n: number): number {
   if (n == 0) return 0
   if (n == 1) return 1
   return fib2(n - 1) + fib2(n - 2)
 }
 
-function fatorial2(n: number) {
+function fatorial2(n: number): number {
   if (n == 0 || n == 1)
     return 1
   return n * fatorial2(n - 1)
 }
 
-function somatoria(n: number) {
+function somatoria(n: number): number {
   if (n == 1)
     return 1
   return n + somatoria(n - 1)

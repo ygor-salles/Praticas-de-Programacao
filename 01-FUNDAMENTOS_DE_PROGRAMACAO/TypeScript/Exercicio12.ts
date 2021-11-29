@@ -4,7 +4,7 @@ positivos e retorna a soma dos N números inteiros existentes entre eles (inclus
 Use a função no programa principal 
 */
 
-function somaXY(x: number, y: number) {
+function somaXY(x: number, y: number): number {
     let soma = 0
     if (y > x) {
         for (let i = x; i <= y; i++)

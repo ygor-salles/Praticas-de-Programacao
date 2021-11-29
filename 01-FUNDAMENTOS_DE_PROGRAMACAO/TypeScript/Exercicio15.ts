@@ -5,7 +5,7 @@ sua diagonal primária e secundária.
 
 //Não é possível trabalhar com matriz dessa forma em JavaScript, só existe Array
 
-const list = []
+const list: number[] = []
 for (let i = 0; i < 4; i++)
     list[i] = Math.floor(Math.random() * 10)
 

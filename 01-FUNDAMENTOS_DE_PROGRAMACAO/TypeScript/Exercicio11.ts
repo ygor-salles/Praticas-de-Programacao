@@ -21,7 +21,7 @@ function imprima() {
     console.log('Universidade federal de Itajuba - Unifei')
 }
 
-function conceito(nota) {
+function conceito(nota: number): string {
     if ((nota >= 0) && (nota <= 4.9))
         return 'D'
     else if ((nota >= 5) && (nota <= 6.9))
@@ -30,7 +30,7 @@ function conceito(nota) {
         return 'B'
     else if ((nota >= 9) && (nota <= 10))
         return 'A'
-
+    return ''
 }
 
 //FUNÇÃO PRINCIPAL
